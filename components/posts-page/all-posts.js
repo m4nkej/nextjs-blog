@@ -1,7 +1,7 @@
-import { Fragment } from "react";
-import Hero from "../components/home-page/hero";
-import FeaturedPosts from "../components/home-page/featured-posts";
-function HomePage() {
+import classes from "./all-posts.module.css";
+import PostGrid from "./posts-grid";
+
+function AllPosts(props) {
   const dummyPostArr = [
     {
       title: "test post",
@@ -33,10 +33,11 @@ function HomePage() {
     },
   ];
   return (
-    <Fragment>
-      <Hero />
-      <FeaturedPosts posts={dummyPostArr} />
-    </Fragment>
+    <section className={classes.posts}>
+      <h1>All Posts</h1>
+      <PostGrid posts={dummyPostArr} />
+    </section>
   );
 }
-export default HomePage;
+
+export default AllPosts;
