@@ -12,7 +12,7 @@ function Hero() {
           height={400}
         />
       </div>
-      <h1>HI im Mat</h1>
+      <h1>Hi, I'm Mat</h1>
       <p>Currently learning NextJS</p>
     </section>
   );
