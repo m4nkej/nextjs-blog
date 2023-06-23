@@ -1,3 +1,4 @@
+import "dotenv/config";
 import Layout from "../components/layout/layout";
 import "../styles/globals.css";
 
