@@ -20,11 +20,12 @@ async function handler(req, res) {
       !message ||
       message.trim() === ""
     ) {
+      client.close();
       res.status(442).json({ message: "Invalid input" });
       return;
     }
 
-    // TODO: add to db
+ 
     const newMessage = {
       email,
       name,
@@ -39,8 +40,6 @@ async function handler(req, res) {
     } catch (error) {
       res.status(500).json({ message: "Inserting message failed!" });
     }
-
-    res.status(201).json({ message: "Success", message: newMessage });
   }
   client.close();
 }
